@@ -1,0 +1,31 @@
+/*
+*
+* TABLE OF CONTENT
+*
+    1. HEADER AREA
+*/
+
+
+/** HEADER AREA START **/
+
+.site-header{
+    border-bottom: 1px solid #f1f1f1d9;
+    box-shadow: 0px 1px 10px #f1f1f196;
+}
+
+
+
+/** POST CARD DESIGN **/
+.entry-content > .entry-title{
+    font-size:22px;
+    height:60px;
+}
+
+.entry-header .post-thumbnail img{
+    height:200px;
+    width:100%;
+}
+
+.entry-content p{
+    height:75px;
+}

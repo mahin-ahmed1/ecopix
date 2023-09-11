@@ -10,7 +10,7 @@
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -26,34 +26,54 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ecopix' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ecopix_description = get_bloginfo( 'description', 'display' );
-			if ( $ecopix_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ecopix_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<div class="container">
+			<div class="row align-items-center">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ecopix' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+				<div class="col-3 logo-area">
+					<?php
+					the_custom_logo();
+					if ( is_front_page() && is_home() ) :
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="text-decoration-none"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php
+					else :
+						?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+					$ecopix_description = get_bloginfo( 'description', 'display' );
+					if ( $ecopix_description || is_customize_preview() ) :
+						?>
+						<p class="site-description"><?php echo $ecopix_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php endif; ?>
+				</div>
+
+				<div class="col-9 menu-area">
+					<nav class="navbar navbar-expand-lg">
+						<div class="nav-container" id="navbarNav">
+							<?php
+							$ecopix_header_menu = wp_nav_menu(
+								array(
+									'theme_location'=> 'header_menu',
+									'container'		=> false,
+									'menu_class'	=> "navbar-nav header-menu",
+									'menu_id'		=>"header-navigation",
+									'echo'			=> false,
+								)
+							);
+							
+							$ecopix_header_menu = str_replace("page_item","nav-item",$ecopix_header_menu);
+							$ecopix_header_menu = str_replace("<a",'<a class="nav-link"',$ecopix_header_menu);
+							echo $ecopix_header_menu;
+							?>	
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
+
+	</h2>
+
+
+	

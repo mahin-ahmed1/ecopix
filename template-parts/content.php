@@ -15,25 +15,22 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				ecopix_posted_on();
-				ecopix_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+			ecopix_post_thumbnail(); 
+			
+		endif;?>
 	</header><!-- .entry-header -->
 
-	<?php ecopix_post_thumbnail(); ?>
+	
 
-	<div class="entry-content">
+	<div class="entry-content px-2 px-lg-4">
 		<?php
-		the_content(
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a class="text-decoration-none" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+
+		the_excerpt(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
@@ -54,10 +51,15 @@
 				'after'  => '</div>',
 			)
 		);
-		?>
-	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php ecopix_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				ecopix_posted_on();
+				ecopix_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

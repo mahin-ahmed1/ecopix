@@ -16,42 +16,61 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<div class="container">
+			<div class="row ">
+				<div class="col-12 col-lg-9">
+					<div class="row">
+						<?php
+						if ( have_posts() ) :
 
-		<?php
-		if ( have_posts() ) :
+							if ( is_home() && ! is_front_page() ) :
+								?>
+								<header>
+									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+								</header>
+								<?php
+							endif;
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+							/* Start the Loop */
+							while ( have_posts() ) :
+								the_post();
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+								/*
+								* Include the Post-Type-specific template for the content.
+								* If you want to override this in a child theme, then include a file
+								* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+								*/?>
+							
+								<div class="col-4 mt-4">
+									<div class="card">
+										<?php get_template_part( 'template-parts/content', get_post_type() );?>
+									</div>
+								</div>
+							
+								<?php
+								
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+							endwhile;
 
-			endwhile;
+							the_posts_navigation();
 
-			the_posts_navigation();
+						else :
 
-		else :
+							get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
+						endif;
+						?>
+					</div>
+				</div>
 
-		endif;
-		?>
+				<!-- SIDEBAR AREA -->
+				<div class="col-12 col-lg-3">
+					<?php get_sidebar();?>
+				</div>
 
+			</div>
+		</div>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
