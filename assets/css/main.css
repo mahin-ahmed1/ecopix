@@ -29,3 +29,18 @@
 .entry-content p{
     height:75px;
 }
+
+.date-icon {
+    width:20px;
+    height:auto;
+}
+
+.author-icon {
+    width:20px;
+    height:auto;
+}
+
+.posted-on a, .author a{
+    text-decoration:none;
+    text-transform:uppercase;
+}

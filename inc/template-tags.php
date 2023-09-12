@@ -19,19 +19,21 @@ if ( ! function_exists( 'ecopix_posted_on' ) ) :
 
 		$time_string = sprintf(
 			$time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
+			esc_attr( get_the_date( 'j M Y' ) ),
+			esc_html( get_the_date( 'j M Y' ) ),
+			esc_attr( get_the_modified_date( 'j M Y' ) ),
+			esc_html( get_the_modified_date( 'j M Y' ) )
 		);
+		
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'ecopix' ),
+			
+			esc_html_x( '%s', 'post date', 'ecopix' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="posted-on"> <img class="date-icon" src="'.get_template_directory_uri().'/assets/images/calendar.png" alt="date-icon"> '. $posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -43,8 +45,8 @@ if ( ! function_exists( 'ecopix_posted_by' ) ) :
 	function ecopix_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'ecopix' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			esc_html_x( '%s', 'post author', 'ecopix' ),
+			'<span class="author vcard">  <img class="author-icon" src="'.get_template_directory_uri().'/assets/images/user.png" alt="author"> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
