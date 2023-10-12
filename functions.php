@@ -135,7 +135,7 @@ function ecopix_widgets_init() {
 add_action( 'widgets_init', 'ecopix_widgets_init' );
 
 function ecopix_custom_excerpt_length($length){
-	$length=14;
+	$length=10;
 	return $length;
 }
 
@@ -158,6 +158,10 @@ function ecopix_scripts() {
 
 	wp_enqueue_style( 'ecopix-style', get_stylesheet_uri(), array(), _S_VERSION );
 
+	wp_enqueue_style('dashicons');
+
+	wp_enqueue_style('ecopix-google-font','//fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 	wp_style_add_data( 'ecopix-style', 'rtl', 'replace' );
 
 	wp_enqueue_script('ecopix-bootstrap',get_template_directory_uri().'/assets/js/bootstrap.min.js',_S_VERSION,array('jquery'),true );
@@ -168,6 +172,17 @@ function ecopix_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ecopix_scripts' );
+
+
+function ecopix_the_title($char_limit = 40) {
+    $title = get_the_title();
+    
+    if (mb_strlen($title) > $char_limit) {
+        $title = mb_substr($title, 0, $char_limit) . '...';
+    }
+    echo "<h2 class='entry-title'><a class='text-decoration-none' href='".get_permalink()."'>".$title."</a></h2>";
+}
+
 
 /**
  * Implement the Custom Header feature.

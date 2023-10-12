@@ -27,7 +27,8 @@
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a class="text-decoration-none" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+			ecopix_the_title();
 		endif;
 
 		the_excerpt(
@@ -59,6 +60,7 @@
 				ecopix_posted_on();
 				ecopix_posted_by();
 				?>
+				
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</div><!-- .entry-content -->

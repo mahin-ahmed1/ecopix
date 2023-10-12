@@ -2,8 +2,16 @@
 *
 * TABLE OF CONTENT
 *
-    1. HEADER AREA
+    1.Body
+    2. HEADER AREA
+    3. Blog Page Design
 */
+
+/* BODY START */
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 /** HEADER AREA START **/
@@ -15,10 +23,16 @@
 
 
 
-/** POST CARD DESIGN **/
+/** BLOG PAGE DESIGN **/
 .entry-content > .entry-title{
-    font-size:22px;
-    height:60px;
+    height:94px;
+    line-height:1.5rem;
+}
+
+.entry-content .entry-title a{
+    font-weight: bold;
+    color: #070e45;
+    font-size: 22px;
 }
 
 .entry-header .post-thumbnail img{
@@ -26,21 +40,46 @@
     width:100%;
 }
 
-.entry-content p{
-    height:75px;
+article .entry-meta .dashicons{
+    font-size: 18px;
+    margin-top: 2px;
 }
 
-.date-icon {
-    width:20px;
-    height:auto;
+.posted-on, .byline{
+    text-align: center;
+    background: #050d27cf;
+    padding: 5px 0;
+    border-radius: 25px;
+    color: white;
 }
-
-.author-icon {
-    width:20px;
-    height:auto;
-}
-
 .posted-on a, .author a{
     text-decoration:none;
     text-transform:uppercase;
+    padding-left:6px;
+    font-size:12px;
+    color:#fff !important;
 }
+
+.author a{
+    padding-left:3px;
+}
+
+.entry-content p{
+    height: 90px;
+    font-family: montserrat;
+    font-size: 15px;
+    font-weight: 400;
+    color: #474747;
+}
+
+article .entry-meta .posted-on{
+    display:inline-block;
+    width:50%;
+}
+
+article .entry-meta .byline{
+    display:inline-block;
+    width:46%;
+    margin-left:4%;
+}
+

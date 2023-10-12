@@ -52,7 +52,11 @@ get_header();
 
 							endwhile;
 
-							the_posts_navigation();
+							the_posts_pagination(array(
+								'prev_text' => 'Previous',
+								'next_text' => 'Next',
+								'mid_size' => 1, // Adjust the number of page numbers displayed
+							));
 
 						else :
 
