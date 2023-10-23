@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', time());
+	define( '_S_VERSION', rand(1,999));
 }
 
 /**
@@ -160,7 +160,9 @@ function ecopix_scripts() {
 
 	wp_enqueue_style('dashicons');
 
-	wp_enqueue_style('ecopix-google-font','//fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+	wp_enqueue_style('ecopix-google-font','//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+	wp_enqueue_style('ecopix-google-font-jost','//fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap');
 
 	wp_style_add_data( 'ecopix-style', 'rtl', 'replace' );
 

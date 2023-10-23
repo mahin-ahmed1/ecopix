@@ -68,7 +68,7 @@ get_header();
 				</div>
 
 				<!-- SIDEBAR AREA -->
-				<div class="col-12 col-lg-3">
+				<div class="col-12 col-lg-3 sidebar-area">
 					<?php get_sidebar();?>
 				</div>
 

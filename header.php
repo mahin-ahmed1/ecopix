@@ -56,12 +56,13 @@
 								array(
 									'theme_location'=> 'header_menu',
 									'container'		=> false,
-									'menu_class'	=> "navbar-nav header-menu",
+									'menu_class'	=> "navbar-nav",
 									'menu_id'		=>"header-navigation",
 									'echo'			=> false,
 								)
 							);
 							
+							$ecopix_header_menu = str_replace("<ul>","<ul class='list-unstyled header-menu'",$ecopix_header_menu);
 							$ecopix_header_menu = str_replace("page_item","nav-item",$ecopix_header_menu);
 							$ecopix_header_menu = str_replace("<a",'<a class="nav-link"',$ecopix_header_menu);
 							echo $ecopix_header_menu;

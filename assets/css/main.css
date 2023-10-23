@@ -83,3 +83,60 @@ article .entry-meta .byline{
     margin-left:4%;
 }
 
+article .entry-title a{
+    font-family: montserrat;
+    font-weight: 700;
+    color: #0c1465;
+}
+
+.sidebar-area .widget-area{
+    padding: 10px;
+    background: #fafafa;
+    margin-top: 25px;
+}
+
+.sidebar-area .widget-area form label{
+    font-weight: 700;
+    font-size: 24px;
+    color:#0c1465;
+}
+
+.sidebar-area .widget-area .wp-block-heading{
+    font-weight: 700;
+    font-size: 24px;
+    color:#0c1465;
+}
+
+
+.sidebar-area .widget-area .wp-block-latest-posts__list li .wp-block-latest-posts__post-title{
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+    color: #7a6d6d;
+    transition:.4s;
+    font-weight:500;
+}
+
+.sidebar-area .widget-area .wp-block-latest-posts__list li .wp-block-latest-posts__post-title:hover{
+    margin-left:5px;
+}
+
+.sidebar-area .widget-area .wp-block-archives-list, .wp-block-categories-list{
+    list-style:none;
+}
+
+.sidebar-area .widget-area .wp-block-archives-list li a, .wp-block-categories-list li a{
+    text-decoration: none;
+    margin-bottom: 8px;
+    display: block;
+    color: #7a6d6d;
+    font-weight:500;
+    transition:.4s;
+}
+
+.sidebar-area .widget-area .wp-block-archives-list li a:hover{
+    margin-left:5px
+}
+.sidebar-area .widget-area .wp-block-categories-list li a:hover{
+    margin-left:5px;
+}
