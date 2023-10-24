@@ -76,7 +76,7 @@ function ecopix_setup() {
 		apply_filters(
 			'ecopix_custom_background_args',
 			array(
-				'default-color' => 'ffffff',
+				'default-color' => 'FAFBFC',
 				'default-image' => '',
 			)
 		)
@@ -162,7 +162,7 @@ function ecopix_scripts() {
 
 	wp_enqueue_style('ecopix-google-font','//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-	wp_enqueue_style('ecopix-google-font-jost','//fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap');
+	wp_enqueue_style('ecopix-google-font-jost','//fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
 
 	wp_style_add_data( 'ecopix-style', 'rtl', 'replace' );
 

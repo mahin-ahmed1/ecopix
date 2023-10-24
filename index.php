@@ -15,11 +15,21 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main blog-page">
 		<div class="container">
 			<div class="row ">
 				<div class="col-12 col-lg-9">
 					<div class="row">
+					<div class="category-box">
+                        <header class="entry-header text-center">
+							<?php 
+							$ecopix_blog_breadcrumb=__('Blog','ecopix');
+							echo "<h2>";
+							echo $ecopix_blog_breadcrumb;
+							echo "</h2>";
+							?>
+                        </header>
+                    </div>
 						<?php
 						if ( have_posts() ) :
 

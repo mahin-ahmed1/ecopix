@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 style="color:red" class="entry-title">', '</h1>' );
 		else :
 			ecopix_post_thumbnail(); 
 			
@@ -24,12 +24,8 @@
 
 	<div class="entry-content px-2 px-lg-4">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
 
 			ecopix_the_title();
-		endif;
 
 		the_excerpt(
 			sprintf(

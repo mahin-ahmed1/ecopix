@@ -19,27 +19,27 @@ get_header();
 		<div class="container">
 			<div class="row ">
 				<div class="col-12 col-lg-9">
-					<div class="row">
-					<div class="archive-box">
+                    <div class="author-box">
                         <header class="entry-header text-center">
                         <?php 
-                        $ecopix_cat_title=__('Category: ','ecopix');
-                        echo "<h2>";
-                        _e("Archives","ecopix");
-                        echo "</h2>";
+
+                        $ecopix_author = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));
+
+                        $ecopix_author_description = $ecopix_author->description ? $ecopix_author->description:'';
+
+                        echo get_avatar(get_the_author_meta('ID'))."<br/>";
+
+                        echo "<span class='text-uppercase d-block'>". $ecopix_author->nickname."</span>";
+
+                        if($ecopix_author_description !=''){
+                            echo $ecopix_author->description;
+                        }  
                         ?>
                         </header>
                     </div>
+					<div class="row">
 						<?php
 						if ( have_posts() ) :
-
-							if ( is_home() && ! is_front_page() ) :
-								?>
-								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								</header>
-								<?php
-							endif;
 
 							/* Start the Loop */
 							while ( have_posts() ) :

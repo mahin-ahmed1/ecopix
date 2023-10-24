@@ -5,12 +5,19 @@
     1.Body
     2. HEADER AREA
     3. Blog Page Design
+    4. Single Post page
+    5. Author Page
 */
 
 /* BODY START */
 
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Jost', sans-serif;
+}
+body{
+    padding:0;
+    margin:0;
+    background:#FAFBFC !important;
 }
 
 
@@ -21,18 +28,47 @@
     box-shadow: 0px 1px 10px #f1f1f196;
 }
 
+.header-menu li {
+    display:inline-block;
+}
 
+.header-menu .nav-link{
+    display:inline-block;
+    color:red !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight:500;
+}
+.logo-area .site-title a{
+    font-size:26px;
+    color:red !important;
+}
+
+.header-area .menu-area {
+    height:50px;
+}
+
+.header-area .row{
+    min-height:80px !important;
+}
+
+.header-area .logo-area {
+    height:38px;
+}
 
 /** BLOG PAGE DESIGN **/
+
+
 .entry-content > .entry-title{
-    height:94px;
+    height:82px;
     line-height:1.5rem;
 }
 
 .entry-content .entry-title a{
-    font-weight: bold;
-    color: #070e45;
+    font-weight: 600;
+    color: #070e45 !important;
     font-size: 22px;
+    text-transform:capitalize;
 }
 
 .entry-header .post-thumbnail img{
@@ -66,9 +102,10 @@ article .entry-meta .dashicons{
 
 .entry-content p{
     height: 90px;
-    font-family: montserrat;
+    font-family: Jost;
     font-size: 15px;
     font-weight: 400;
+    margin-bottom:5px;
     color: #474747;
 }
 
@@ -84,35 +121,45 @@ article .entry-meta .byline{
 }
 
 article .entry-title a{
-    font-family: montserrat;
+    font-family: 'Jost', sans-serif;;
     font-weight: 700;
     color: #0c1465;
 }
 
-.sidebar-area .widget-area{
-    padding: 10px;
-    background: #fafafa;
+.sidebar-area .widget-area {
+    padding: 10px 15px 10px 30px;
     margin-top: 25px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: rgb(255 255 255 / 2%) 0px 1px 3px 0px, rgb(108 98 98 / 15%) 0px 0px 0px 1px;
 }
 
+
+.card{
+    border:1px solid white !important;
+}
 .sidebar-area .widget-area form label{
     font-weight: 700;
     font-size: 24px;
     color:#0c1465;
+    margin-bottom:15px;
 }
 
 .sidebar-area .widget-area .wp-block-heading{
     font-weight: 700;
     font-size: 24px;
     color:#0c1465;
+    margin-bottom:15px;
 }
-
+.sidebar-area{
+    padding:0;
+}
 
 .sidebar-area .widget-area .wp-block-latest-posts__list li .wp-block-latest-posts__post-title{
     text-decoration: none;
     margin-bottom: 8px;
     display: block;
-    color: #7a6d6d;
+    color: #7a6d6d !important;
     transition:.4s;
     font-weight:500;
 }
@@ -121,15 +168,20 @@ article .entry-title a{
     margin-left:5px;
 }
 
-.sidebar-area .widget-area .wp-block-archives-list, .wp-block-categories-list{
-    list-style:none;
+.wp-block-latest-posts__list{
+    margin-left:25px;
 }
 
-.sidebar-area .widget-area .wp-block-archives-list li a, .wp-block-categories-list li a{
+.sidebar-area .widget-area .wp-block-archives-list, .wp-block-categories-list{
+    list-style:none;
+    margin-left:6px;
+}
+
+.sidebar-area .widget-area .wp-block-archives-list li a, .wp-block-latest-comments__comment-meta a, .wp-block-categories-list li a{
     text-decoration: none;
     margin-bottom: 8px;
     display: block;
-    color: #7a6d6d;
+    color: #7a6d6d !important;
     font-weight:500;
     transition:.4s;
 }
@@ -139,4 +191,56 @@ article .entry-title a{
 }
 .sidebar-area .widget-area .wp-block-categories-list li a:hover{
     margin-left:5px;
+}
+
+/*
+SINGLE POST PAGE
+*/
+
+.single-entry-meta{
+    width:500px;
+}
+
+.entry-header .single-entry-meta .posted-on{
+    width: 150px;
+    color:white;
+}
+
+.entry-header .single-entry-meta .byline{
+    width: 150px;
+    margin:0 10px;
+}
+
+.single-post .post-thumbnail img{
+    border-radius:6px;
+    margin-bottom:25px;
+}
+
+.single-post .entry-header, .author-box .entry-header, .category-box .entry-header, .archive-box .entry-header{
+    margin-top: 26px;
+    padding: 30px 0 28px 30px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 6px;
+}
+
+
+/* AUTHOR PAGE DESIGN */
+
+.author-box .entry-header{
+    padding:30px;
+}
+.author-box .entry-header img{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    border: 2px solid #cfcfcf;
+    padding: 8px;
+    margin-bottom:20px;
+}
+
+.author-box .entry-header span{
+    margin-bottom:20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
 }

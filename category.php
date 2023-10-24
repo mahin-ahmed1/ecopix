@@ -19,27 +19,19 @@ get_header();
 		<div class="container">
 			<div class="row ">
 				<div class="col-12 col-lg-9">
-					<div class="row">
-					<div class="archive-box">
+                    <div class="category-box">
                         <header class="entry-header text-center">
                         <?php 
                         $ecopix_cat_title=__('Category: ','ecopix');
                         echo "<h2>";
-                        _e("Archives","ecopix");
+                        echo single_cat_title($ecopix_cat_title);
                         echo "</h2>";
                         ?>
                         </header>
                     </div>
+					<div class="row">
 						<?php
 						if ( have_posts() ) :
-
-							if ( is_home() && ! is_front_page() ) :
-								?>
-								<header>
-									<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-								</header>
-								<?php
-							endif;
 
 							/* Start the Loop */
 							while ( have_posts() ) :
