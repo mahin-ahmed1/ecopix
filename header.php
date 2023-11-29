@@ -31,7 +31,7 @@
 
 				<div class="col-3 logo-area">
 					<?php the_custom_logo();?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title"><a class="text-decoration-none" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 					$ecopix_description = get_bloginfo( 'description', 'display' );
 					if ( $ecopix_description || is_customize_preview() ) :
@@ -41,6 +41,7 @@
 				</div>
 
 				<div class="col-9 menu-area">
+				<a href="#" class="toggle-menu text-decoration-none"><span class="dashicons dashicons-menu"></span></a>
 					<nav class="navbar navbar-expand-lg">
 						<div class="nav-container <?php echo apply_filters('ecopix_topmenu_align','');?>" id="navbarNav">
 							<?php

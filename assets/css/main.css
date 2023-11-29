@@ -67,6 +67,8 @@ header .menu-area .nav-container, ul{
     width:100%;
 }
 
+
+
 /** BLOG PAGE DESIGN **/
 
 
@@ -272,3 +274,7 @@ SINGLE POST PAGE
     letter-spacing: 2px;
     font-size: 20px;
 }
+.toggle-menu{
+    display:none;
+}
+

@@ -27,7 +27,7 @@ function ecopix_style_from_customizer(){
     $ecopix_h1_font_typography          = get_theme_mod('heading1_font_typography');
     $ecopix_h2_font_typography          = get_theme_mod('heading2_font_typography');
     $ecopix_h3_font_typography          = get_theme_mod('heading3_font_typography');
-    $ecopix_menu_item_spacing           = get_theme_mod('menu_link_space','15');
+    $ecopix_menu_item_spacing           = get_theme_mod('menu_link_space','20');
     $ecopix_active_menu_item_color      = get_theme_mod('active_menu_item_color','#0C1465');
     $ecopix_menu_item_hover             = get_theme_mod('hover_menu_item_color','#0C1465');
     
@@ -127,12 +127,12 @@ function ecopix_style_from_customizer(){
         font-size: <?php echo $ecopix_header_menu_typography['font-size'];?>;
         text-transform: <?php echo $ecopix_header_menu_typography['text-transform'];?>;
         color: <?php echo $ecopix_header_menu_typography['color'];?>;
-        margin-left: <?php echo $ecopix_menu_item_spacing;?>px !important;
+        margin-left: <?php echo $ecopix_menu_item_spacing;?>px;
         transition: .4s;
       }
 
       #header-navigation li a:hover{
-        color: <?php echo $ecopix_menu_item_hover;?>
+        color: <?php echo $ecopix_menu_item_hover;?>;
       }
 
       #header-navigation .current_nav-item a{

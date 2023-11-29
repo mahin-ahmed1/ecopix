@@ -100,7 +100,7 @@ if (class_exists('Kirki')) {
             'settings'    => 'menu_link_space',
             'label'       => esc_html__( 'Menu items spacing', 'ecopix' ),
             'section'     => 'header_section',
-            'default'     => 15,
+            'default'     => 20,
             'choices'     => [
                 'min'  => 0,
                 'max'  => 100,

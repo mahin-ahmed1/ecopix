@@ -1,6 +1,6 @@
 /*!
 Theme Name: Ecopix
-Theme URI:
+Theme URI: https://mahin-ahmed1.github.io/ecopix/
 Author: Mahin Ahmed
 Author URI: https://github.com/mahin-ahmed1
 Description: Ecopix is a super fast and lightweight WordPress theme built with the latest web technologies. It was built with the Gutenberg editor in mind and has a lot of options that makes it extendable and customizable. You can easily create any type of website, such as business agency, shop, corporate, education, restaurant, blog, portfolio, landing page and so on. It works awesome with popular WordPress page builders.  Note:We strongly recommend you to update/switch to a modern browser.
@@ -1101,6 +1101,7 @@ ul .menu-item-has-children{
 .submenu-indicator{
 	display:inline-block !important;
 	text-decoration:none;
+	margin-left:5px !important;
 }
 
 
@@ -1136,6 +1137,76 @@ ul .menu-item-has-children{
 .pagination .nav-links .next{
 	padding-left:29px;
 }
-.hehe{
+.active-submenu{
 	display:block !important;
 }
+
+
+
+
+
+
+
+
+/* RESPONSIVE CSS */
+
+
+@media only screen and (max-width: 768px) {
+    
+    header{
+        position:relative;
+    }
+    #header-navigation{
+        margin:0 !important;
+        text-align:center !important;
+    }
+    .header-menu li {
+      display:block;
+    }
+    #header-navigation .nav-link{
+        color:white !important;
+        border-bottom: 2px solid transparent;
+        transition: .4s;
+		margin-left:0 !important;
+    }
+	.submenu-indicator{
+		color: white !important;
+	}
+	.menu-item-has-children ul {
+		width:100%;
+	}
+	.menu-item-has-children ul li > .sub-menu {
+		left:0 !important;
+		right:0;
+		top:100% !important;
+		
+	}
+
+    #header-navigation .header-menu .nav-link:hover{
+        border-bottom: 2px solid white;
+    }
+    
+    .menu-area .navbar{
+        position: absolute;
+        background: #343B50;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index:+99;
+        padding:20px 0;
+        display:none;
+    }
+	.sub-menu{
+		background:#50586e !important;
+	}
+    .toggle-menu{
+        position: absolute;
+        right: 30px;
+        display:block;
+      
+    }
+    .toggle-menu span{
+        font-size:40px;
+    }
+  }

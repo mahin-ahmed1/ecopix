@@ -29,7 +29,7 @@ require_once get_theme_file_path().'/inc/customizer-control.php';
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', rand(1,999));
+	define( '_S_VERSION', '1.0.0');
 }
 
 /**
