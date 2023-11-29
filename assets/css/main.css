@@ -272,34 +272,3 @@ SINGLE POST PAGE
     letter-spacing: 2px;
     font-size: 20px;
 }
-
-/* FOOTER AREA START */
-
-.footer-row{
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 10px;
-
-}
-
-.footer-row ul{
-    padding:0;
-    list-style:none;
-    margin:10px;
-}
-
-.footer-row ul li a{
-    text-decoration:none;
-    margin:8px 0;
-    display:block;
-}
-
-.footer-row h2{
-    font-size:26px;
-}
-
-.site-footer .site-info{
-    border-top: 1px solid #a3a3a3;
-    margin-top: 40px;
-}
