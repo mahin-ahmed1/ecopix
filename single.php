@@ -11,10 +11,10 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-		<div class="container">
+		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 			<div class="row">
 				<!---- CONTENT AREA START ------>
-				<div class="col-12 col-lg-9 single-post">
+				<div class="col-12 single-post <?php echo apply_filters('ecopix_col_manage','col-lg-9');?>">
 							<?php
 					while ( have_posts() ) :
 						the_post();
@@ -38,11 +38,13 @@ get_header();
 				</div>
 				<!---- CONTENT AREA END ------>
 
-				<!---- SIDEBAR AREA START ----->
-					<div class="col-12 col-lg-3 sidebar-area">
-						<?php get_sidebar();?>
-					</div>
-				<!---- SIDEBAR AREA START ----->
+				<!-- SIDEBAR AREA START -->
+				<?php if(get_theme_mod('sidebar_switch','on')):?>
+				<div class="col-12 col-lg-3 sidebar-area">
+					<?php get_sidebar();?>
+				</div>
+				<?php endif;?>
+				<!-- SIDEBAR AREA END-->
 			</div>
 		</div>
 

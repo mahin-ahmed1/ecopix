@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header <?php echo apply_filters("ecopix_single_text_align","text-left");?>">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );?>
@@ -18,7 +18,7 @@
         if ( 'post' === get_post_type() ) :
 			?>
             <!-- .entry-meta start-->
-			<div class="entry-meta single-entry-meta">
+			<div class="entry-meta single-entry-meta <?php echo apply_filters("ecopix_single_entrymeta_align","m-auto");?>">
 				<?php
 				ecopix_posted_on();
 				ecopix_posted_by();
@@ -39,7 +39,7 @@
 
 	
 
-	<div class="entry-content">
+	<div class="entry-content <?php echo apply_filters("ecopix_single_text_align","text-left");?>">
         <div class="post-thumbnail">
         <?php 
         the_post_thumbnail('full');?>

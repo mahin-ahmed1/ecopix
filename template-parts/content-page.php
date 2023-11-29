@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header <?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php ecopix_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?> entry-content mahin m-auto">
 		<?php
 		the_content();
 

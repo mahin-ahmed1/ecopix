@@ -1,22 +1,21 @@
 /*!
-Theme Name: ecopix
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme Name: Ecopix
+Theme URI:
+Author: Mahin Ahmed
+Author URI: https://github.com/mahin-ahmed1
+Description: Ecopix is a super fast and lightweight WordPress theme built with the latest web technologies. It was built with the Gutenberg editor in mind and has a lot of options that makes it extendable and customizable. You can easily create any type of website, such as business agency, shop, corporate, education, restaurant, blog, portfolio, landing page and so on. It works awesome with popular WordPress page builders.  Note:We strongly recommend you to update/switch to a modern browser.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: ecopix
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: blog, e-commerce, wide-blocks, grid-layout, one-column, two-columns, three-columns, four-columns, right-sidebar, left-sidebar, translation-ready, custom-colors, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments, rtl-language-support, news
+
+
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
-
-ecopix is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
@@ -966,4 +965,177 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+
+
+/* Skip Links Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	background:#0C1465 !important;
+	color:white;
+	font-size:24px !important;
+	text-align:center;
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  
+  .screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	right: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+  }
+  
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+	outline: 0;
+  }
+  :focus {
+	  outline: none;
+	  color: #0C1465 !important;
+  }
+  .skip-link:focus{
+	outline: none;
+	color: white !important;
+	padding:0px 8px;
+  }
+
+  .entry-title a:focus{
+	background: #0C1465;
+	  color: white !important;
+  }
+  .skip-link {
+	padding:12px 20px !important;
+  }
+
+
+
+
+
+
+
+
+  /* navigation menu */
+
+
+  nav ul li .sub-menu{
+	background:#FAFBFC;
+	padding:10px;
+	margin:0;
+  }
+ 
+  nav ul li{
+	list-style:none;
+  }
+  nav ul li .nav-link{
+	
+	display:inline-block !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+  }
+
+
+  .menu-item-has-children ul{
+	padding: 5px 0 6px 10px;
+	position: absolute;
+	width: 170px;
+	top: 40px;
+	left: 0px;
+	right: 0;
+	background: #FAFBFC;
+	margin: 0;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 1px 0px 1px;
+	display: none;
+	transition: .3s;
+	z-index:+111;
+
+}
+
+.menu-item-has-children ul li > .sub-menu{
+	left: 100%;
+	top:15px;
+}
+
+.menu-item-has-children:hover > .sub-menu{
+	display:block !important;
+}
+
+.menu-item-has-children:focus > .sub-menu{
+	display:block !important;
+}
+.menu-item-has-children ul li a {
+	margin: 0;
+}
+ul .menu-item-has-children{
+	position: relative;
+}
+.menu-item-has-children ul li{
+	display: block;
+}
+
+
+.submenu-indicator{
+	display:inline-block !important;
+	text-decoration:none;
+}
+
+
+
+.pagination{
+	background: #343B50;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+.pagination .nav-links{
+	margin:auto;
+}
+
+.pagination .nav-links .page-numbers{
+	background: white;
+    width: 40px;
+    display: inline-flex;
+    height: 40px;
+    align-items: center;
+    padding-left: 17px;
+    border-radius: 4px;
+	text-decoration:none;
+	margin:6px;
+}
+
+.pagination .nav-links .prev, .pagination .nav-links .next{
+	width:88px;
+}
+
+.pagination .nav-links .next{
+	padding-left:29px;
+}
+.hehe{
+	display:block !important;
 }

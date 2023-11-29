@@ -16,15 +16,15 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main blog-page">
-		<div class="container">
-			<div class="row ">
-				<div class="col-12 col-lg-9">
+		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?> pb-5">
+			<div class="row <?php echo apply_filters('ecopix_sidebar_position','');?>">
+				<div class="col-12 loop-area <?php echo apply_filters('ecopix_col_manage','col-lg-9');?>">
 					<div class="row">
 					<div class="category-box">
                         <header class="entry-header text-center">
 							<?php 
 							$ecopix_blog_breadcrumb=__('Blog','ecopix');
-							echo "<h2>";
+							echo "<h2 class='entry-header-title'>";
 							echo $ecopix_blog_breadcrumb;
 							echo "</h2>";
 							?>
@@ -51,9 +51,9 @@ get_header();
 								* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 								*/?>
 							
-								<div class="col-4 mt-4">
+								<div class="col-12 col-lg-4 mt-4">
 									<div class="card">
-										<?php get_template_part( 'template-parts/content', get_post_type() );?>
+										<?php get_template_part( 'template-parts/content', get_post_type() );?> 
 									</div>
 								</div>
 							
@@ -77,10 +77,13 @@ get_header();
 					</div>
 				</div>
 
-				<!-- SIDEBAR AREA -->
+				<!-- SIDEBAR AREA START -->
+				<?php if(get_theme_mod('sidebar_switch','on')):?>
 				<div class="col-12 col-lg-3 sidebar-area">
 					<?php get_sidebar();?>
 				</div>
+				<?php endif;?>
+				<!-- SIDEBAR AREA END-->
 
 			</div>
 		</div>

@@ -26,21 +26,13 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ecopix' ); ?></a>
 
 	<header id="masthead" class="site-header header-area">
-		<div class="container">
+		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 			<div class="row align-items-center">
 
 				<div class="col-3 logo-area">
-					<?php
-					the_custom_logo();
-					if ( is_front_page() && is_home() ) :
-						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="text-decoration-none"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
-					else :
-						?>
+					<?php the_custom_logo();?>
 						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
+				<?php
 					$ecopix_description = get_bloginfo( 'description', 'display' );
 					if ( $ecopix_description || is_customize_preview() ) :
 						?>
@@ -50,7 +42,7 @@
 
 				<div class="col-9 menu-area">
 					<nav class="navbar navbar-expand-lg">
-						<div class="nav-container" id="navbarNav">
+						<div class="nav-container <?php echo apply_filters('ecopix_topmenu_align','');?>" id="navbarNav">
 							<?php
 							$ecopix_header_menu = wp_nav_menu(
 								array(
@@ -74,7 +66,6 @@
 		</div>
 	</header><!-- #masthead -->
 
-	</h2>
 
 
 	

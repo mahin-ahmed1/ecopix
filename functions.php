@@ -7,6 +7,26 @@
  * @package ecopix
  */
 
+
+ /*
+*TGM LIBRARY 
+*/
+require_once get_theme_file_path().'/inc/ecopix-plugin-installer.php';
+
+
+ /*
+*Ecopix Customizer
+*/
+require_once get_theme_file_path().'/inc/ecopix-customizer.php';
+
+ /*
+*Ecopix Customizer Control
+*/
+require_once get_theme_file_path().'/inc/customizer-control.php';
+
+
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', rand(1,999));
@@ -122,15 +142,65 @@ add_action( 'after_setup_theme', 'ecopix_content_width', 0 );
 function ecopix_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'ecopix' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Blog Sidebar', 'ecopix' ),
+			'id'            => 'ecopix-blog-sidebar',
 			'description'   => esc_html__( 'Add widgets here.', 'ecopix' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		)
+		),
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widget 1', 'ecopix' ),
+			'id'            => 'ecopix-footer-widget-1',
+			'description'   => esc_html__( 'Add widgets here.', 'ecopix' ),
+			'before_widget' => ' ',
+			'after_widget'  => ' ',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widget 2', 'ecopix' ),
+			'id'            => 'ecopix-footer-widget-2',
+			'description'   => esc_html__( 'Add widgets here.', 'ecopix' ),
+			'before_widget' => '<div class="footer-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widget 3', 'ecopix' ),
+			'id'            => 'ecopix-footer-widget-3',
+			'description'   => esc_html__( 'Add widgets here.', 'ecopix' ),
+			'before_widget' => '<div class="footer-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Widget 4', 'ecopix' ),
+			'id'            => 'ecopix-footer-widget-4',
+			'description'   => esc_html__( 'Add widgets here.', 'ecopix' ),
+			'before_widget' => '<div class="footer-widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		),
+	);
+
+	
 }
 add_action( 'widgets_init', 'ecopix_widgets_init' );
 
@@ -160,20 +230,26 @@ function ecopix_scripts() {
 
 	wp_enqueue_style('dashicons');
 
-	wp_enqueue_style('ecopix-google-font','//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
 	wp_enqueue_style('ecopix-google-font-jost','//fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
 
 	wp_style_add_data( 'ecopix-style', 'rtl', 'replace' );
 
 	wp_enqueue_script('ecopix-bootstrap',get_template_directory_uri().'/assets/js/bootstrap.min.js',_S_VERSION,array('jquery'),true );
 	wp_enqueue_script( 'ecopix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script('ecopix-main',get_template_directory_uri().'/assets/js/main.js',_S_VERSION,array('jquery'),true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ecopix_scripts' );
+
+
+function ecopix_admin_script(){
+
+	wp_enqueue_style('customizer-control-style',get_template_directory_uri().'/assets/css/admin.css',_S_VERSION);
+}
+add_action("admin_enqueue_scripts","ecopix_admin_script");
 
 
 function ecopix_the_title($char_limit = 40) {
@@ -212,4 +288,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
 

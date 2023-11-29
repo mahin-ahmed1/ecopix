@@ -7,6 +7,7 @@
     3. Blog Page Design
     4. Single Post page
     5. Author Page
+    6. Footer Area
 */
 
 /* BODY START */
@@ -14,12 +15,19 @@
 *{
     font-family: 'Jost', sans-serif;
 }
+
 body{
     padding:0;
     margin:0;
     background:#FAFBFC !important;
 }
 
+.sidebar-area .wp-block-search__button{
+    background: #0C1465;
+    color: white;
+    font-family: jost;
+    padding: 10px 14px;
+}
 
 /** HEADER AREA START **/
 
@@ -28,16 +36,19 @@ body{
     box-shadow: 0px 1px 10px #f1f1f196;
 }
 
+.header-area .logo-area a img{
+    width:130px;
+    height:auto;
+}
+
 .header-menu li {
     display:inline-block;
 }
 
 .header-menu .nav-link{
     display:inline-block;
-    color:red !important;
     font-size: 16px;
-    text-transform: uppercase;
-    font-weight:500;
+    margin:0 15px;
 }
 .logo-area .site-title a{
     font-size:26px;
@@ -52,8 +63,8 @@ body{
     min-height:80px !important;
 }
 
-.header-area .logo-area {
-    height:38px;
+header .menu-area .nav-container, ul{
+    width:100%;
 }
 
 /** BLOG PAGE DESIGN **/
@@ -79,8 +90,12 @@ body{
 article .entry-meta .dashicons{
     font-size: 18px;
     margin-top: 2px;
+    color: #fff;
 }
 
+a time{
+    color:white;
+}
 .posted-on, .byline{
     text-align: center;
     background: #050d27cf;
@@ -102,8 +117,6 @@ article .entry-meta .dashicons{
 
 .entry-content p{
     height: 90px;
-    font-family: Jost;
-    font-size: 15px;
     font-weight: 400;
     margin-bottom:5px;
     color: #474747;
@@ -127,11 +140,26 @@ article .entry-title a{
 }
 
 .sidebar-area .widget-area {
-    padding: 10px 15px 10px 30px;
+    padding: 20px;
     margin-top: 25px;
     background: white;
     border-radius: 6px;
     box-shadow: rgb(255 255 255 / 2%) 0px 1px 3px 0px, rgb(108 98 98 / 15%) 0px 0px 0px 1px;
+}
+.sidebar-area .widget-area ul{
+    margin:0;
+    padding:0;
+    margin-left:15px;
+}
+
+.sidebar-area ol{
+    padding:0;
+    margin:0;
+    padding-left:15px;
+}
+
+.sidebar-area .widget_block{
+    overflow:hidden;
 }
 
 
@@ -159,7 +187,6 @@ article .entry-title a{
     text-decoration: none;
     margin-bottom: 8px;
     display: block;
-    color: #7a6d6d !important;
     transition:.4s;
     font-weight:500;
 }
@@ -181,7 +208,6 @@ article .entry-title a{
     text-decoration: none;
     margin-bottom: 8px;
     display: block;
-    color: #7a6d6d !important;
     font-weight:500;
     transition:.4s;
 }
@@ -222,7 +248,9 @@ SINGLE POST PAGE
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 6px;
 }
-
+.single-post .entry-header{
+    padding-top:1px;
+}
 
 /* AUTHOR PAGE DESIGN */
 
@@ -243,4 +271,35 @@ SINGLE POST PAGE
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 20px;
+}
+
+/* FOOTER AREA START */
+
+.footer-row{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 10px;
+
+}
+
+.footer-row ul{
+    padding:0;
+    list-style:none;
+    margin:10px;
+}
+
+.footer-row ul li a{
+    text-decoration:none;
+    margin:8px 0;
+    display:block;
+}
+
+.footer-row h2{
+    font-size:26px;
+}
+
+.site-footer .site-info{
+    border-top: 1px solid #a3a3a3;
+    margin-top: 40px;
 }
