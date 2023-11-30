@@ -242,6 +242,7 @@ function ecopix_scripts() {
 
 	wp_style_add_data( 'ecopix-style', 'rtl', 'replace' );
 
+	wp_enqueue_script('jquery');
 	wp_enqueue_script('ecopix-bootstrap',get_template_directory_uri().'/assets/js/bootstrap.min.js',_S_VERSION,array('jquery'),true );
 	wp_enqueue_script( 'ecopix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script('ecopix-main',get_template_directory_uri().'/assets/js/main.js',_S_VERSION,array('jquery'),true );
