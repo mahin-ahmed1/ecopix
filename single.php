@@ -9,7 +9,6 @@
 
 get_header();
 ?>
-
 	<main id="primary" class="site-main">
 		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 			<div class="row">

@@ -5,33 +5,50 @@
 
 function ecopix_style_from_customizer(){
 
-    $ecopix_content_spacing             = get_theme_mod('content_spacing');
-    $ecopix_footer_background           = get_theme_mod('footer_background','#343B50');
-    $ecopix_footer_text_color           = get_theme_mod('footer_text_color','#fff');
-    $ecopix_footer_heading_color        = get_theme_mod('footer_heading_color',"#fff");
-    $ecopix_copyright_separator_color   = get_theme_mod('footer_copyright_separator','#a3a3a3');
-    $ecopix_sidebar_vertical_space      = get_theme_mod('sidebar_widget_vertical_spacing','0');
-    $ecopix_mobile_sidebar_position     = get_theme_mod('mobile_sidebar_position','bottom');
-    $ecopix_base_text_color             = get_theme_mod('base_text_color','#7a6d6d');
-    $ecopix_link_text_color             = get_theme_mod('link_color','#7a6d6d');
-    $ecopix_link_hover_color            = get_theme_mod('link_hover_color','#484545');
-    $ecopix_all_headings_color          = get_theme_mod('all_heading_color','#0c1465');
-    $ecopix_heading1_color              = get_theme_mod('heading1_color','#0c1465');
-    $ecopix_heading2_color              = get_theme_mod('heading2_color','#0c1465');
-    $ecopix_heading3_color              = get_theme_mod('heading3_color','#0c1465');
-    $ecopix_heading4_color              = get_theme_mod('heading4_color','#0c1465');
-    $ecopix_heading5_color              = get_theme_mod('heading5_color','#0c1465');
-    $ecopix_heading6_color              = get_theme_mod('heading6_color','#0c1465');
+    $ecopix_content_spacing             = get_theme_mod('content_spacing')? get_theme_mod('content_spacing'):'';
+    $ecopix_footer_background           = get_theme_mod('footer_background','#343B50')?get_theme_mod('footer_background','#343B50'):'#343B50';
+    $ecopix_footer_text_color           = get_theme_mod('footer_text_color','#fff')?get_theme_mod('footer_text_color','#fff'):'#fff';
+    $ecopix_footer_heading_color        = get_theme_mod('footer_heading_color',"#fff")? get_theme_mod('footer_heading_color',"#fff"): "#fff";
+    $ecopix_copyright_separator_color   = get_theme_mod('footer_copyright_separator','#a3a3a3') ? get_theme_mod('footer_copyright_separator','#a3a3a3'): "#a3a3a3";
+    $ecopix_sidebar_vertical_space      = get_theme_mod('sidebar_widget_vertical_spacing','0')?get_theme_mod('sidebar_widget_vertical_spacing','0'):'0';
+    $ecopix_mobile_sidebar_position     = get_theme_mod('mobile_sidebar_position','bottom')?get_theme_mod('mobile_sidebar_position','bottom'):'bottom';
+    $ecopix_base_text_color             = get_theme_mod('base_text_color','#7a6d6d')?get_theme_mod('base_text_color','#7a6d6d'):'#7a6d6d';
+    $ecopix_link_text_color             = get_theme_mod('link_color','#7a6d6d')?get_theme_mod('link_color','#7a6d6d'):'#7a6d6d';
+    $ecopix_link_hover_color            = get_theme_mod('link_hover_color','#484545')?get_theme_mod('link_hover_color','#484545'):'#484545';
+    $ecopix_all_headings_color          = get_theme_mod('all_heading_color','#0c1465')?get_theme_mod('all_heading_color','#0c1465'):'#0c1465';
+    $ecopix_heading1_color              = get_theme_mod('heading1_color','#0c1465')?get_theme_mod('heading1_color','#0c1465'):'#0c1465';
+    $ecopix_heading2_color              = get_theme_mod('heading2_color','#0c1465')?get_theme_mod('heading2_color','#0c1465'):'#0c1465';
+    $ecopix_heading3_color              = get_theme_mod('heading3_color','#0c1465')?get_theme_mod('heading3_color','#0c1465'):'#0c1465';
+    $ecopix_heading4_color              = get_theme_mod('heading4_color','#0c1465')?get_theme_mod('heading4_color','#0c1465'):'#0c1465';
+    $ecopix_heading5_color              = get_theme_mod('heading5_color','#0c1465')?get_theme_mod('heading5_color','#0c1465'):'#0c1465';
+    $ecopix_heading6_color              = get_theme_mod('heading6_color','#0c1465')? get_theme_mod('heading6_color','#0c1465'):'#0c1465';
     $ecopix_header_menu_typography      = get_theme_mod('header_typography_setting');
     $ecopix_base_font_typography        = get_theme_mod('base_font_typography');
     $ecopix_h1_font_typography          = get_theme_mod('heading1_font_typography');
     $ecopix_h2_font_typography          = get_theme_mod('heading2_font_typography');
     $ecopix_h3_font_typography          = get_theme_mod('heading3_font_typography');
-    $ecopix_menu_item_spacing           = get_theme_mod('menu_link_space','20');
-    $ecopix_active_menu_item_color      = get_theme_mod('active_menu_item_color','#0C1465');
-    $ecopix_menu_item_hover             = get_theme_mod('hover_menu_item_color','#0C1465');
+    $ecopix_menu_item_spacing           = get_theme_mod('menu_link_space','20')?get_theme_mod('menu_link_space','20'):'20';
+    $ecopix_active_menu_item_color      = get_theme_mod('active_menu_item_color','#0C1465')?get_theme_mod('active_menu_item_color','#0C1465'):'#0C1465';
+    $ecopix_menu_item_hover             = get_theme_mod('hover_menu_item_color','#0C1465')?get_theme_mod('hover_menu_item_color','#0C1465'):'#0C1465';
+
+
+    $ecopix_base_font_family=is_array($ecopix_base_font_typography) && array_key_exists('font-family',$ecopix_base_font_typography)?$ecopix_base_font_typography['font-family']:'Jost';
+    $ecopix_base_font_weight=is_array($ecopix_base_font_typography) && array_key_exists('variant',$ecopix_base_font_typography)?$ecopix_base_font_typography['variant']:'regular';
+    $ecopix_base_font_size=is_array($ecopix_base_font_typography) && array_key_exists('font-size',$ecopix_base_font_typography)?$ecopix_base_font_typography['font-size']:'16px';
+    $ecopix_base_font_text_transform=is_array($ecopix_base_font_typography) && array_key_exists('text-transform',$ecopix_base_font_typography)?$ecopix_base_font_typography['text-transform']:'none';
+    $ecopix_base_font_letter_spacing=is_array($ecopix_base_font_typography) && array_key_exists('letter-spacing',$ecopix_base_font_typography)?$ecopix_base_font_typography['letter-spacing']:'0';
+    $ecopix_base_font_text_decoration=is_array($ecopix_base_font_typography) && array_key_exists('text-decoration',$ecopix_base_font_typography)?$ecopix_base_font_typography['text-decoration']:'none';
+    $ecopix_base_font_line_height=is_array($ecopix_base_font_typography) && array_key_exists('line-height',$ecopix_base_font_typography)?$ecopix_base_font_typography['line-height']:'1.3em';
     
+    $ecopix_header_menu_font_family= is_array($ecopix_header_menu_typography) && array_key_exists('font-family',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['font-family']:'Jost';
+    $ecopix_header_menu_font_weight= is_array($ecopix_header_menu_typography) && array_key_exists('variant',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['variant']:'500';
+    $ecopix_header_menu_font_size= is_array($ecopix_header_menu_typography) && array_key_exists('font-size',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['font-size']:'16px';
     
+    $ecopix_header_menu_font_style= is_array($ecopix_header_menu_typography) && array_key_exists('font-style',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['font-style']:'normal';
+    $ecopix_header_menu_font_transform= is_array($ecopix_header_menu_typography) && array_key_exists('text-transform',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['text-transform']:'none';
+    $ecopix_header_menu_font_decoration= is_array($ecopix_header_menu_typography) && array_key_exists('text-decoration',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['text-decoration']:'none';
+    $ecopix_header_menu_font_spacing= is_array($ecopix_header_menu_typography) && array_key_exists('letter-spacing',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['letter-spacing']:'0';
+    $ecopix_header_menu_font_color= is_array($ecopix_header_menu_typography) && array_key_exists('color',$ecopix_header_menu_typography)?$ecopix_header_menu_typography['color']:'#343b50';
     ?>
  
     <style>
@@ -40,23 +57,33 @@ function ecopix_style_from_customizer(){
       }
       body span{
         color: <?php echo $ecopix_base_text_color;?>;      
-        font-family: <?php echo $ecopix_base_font_typography['font-family'];?>;
-        font-weight: <?php echo $ecopix_base_font_typography['variant'];?>;
-        font-size: <?php echo $ecopix_base_font_typography['font-size'];?>;
-        text-transform: <?php echo $ecopix_base_font_typography['text-transform'];?>;
-        letter-spacing: <?php echo $ecopix_base_font_typography['letter-spacing'];?>px;
-        text-decoration: <?php echo $ecopix_base_font_typography['text-decoration'];?>;
-        line-height: <?php echo $ecopix_base_font_typography['line-height'];?>;
+        font-family: <?php echo $ecopix_base_font_family;?> !important;
+        font-weight: <?php echo $ecopix_base_font_weight;?>;
+        font-size: <?php echo $ecopix_base_font_size;?>;
+        text-transform: <?php echo $ecopix_base_font_text_transform;?>;
+        letter-spacing: <?php echo $ecopix_base_font_letter_spacing;?>px;
+        text-decoration: <?php echo $ecopix_base_font_text_decoration;?>;
+        line-height: <?php echo $ecopix_base_font_line_height;?>;
+      }
+      body p{
+        color: <?php echo $ecopix_base_text_color;?>;      
+        font-family: <?php echo $ecopix_base_font_family;?> !important;
+        font-weight: <?php echo $ecopix_base_font_weight;?>;
+        font-size: <?php echo $ecopix_base_font_size;?>;
+        text-transform: <?php echo $ecopix_base_font_text_transform;?>;
+        letter-spacing: <?php echo $ecopix_base_font_letter_spacing;?>px;
+        text-decoration: <?php echo $ecopix_base_font_text_decoration;?>;
+        line-height: <?php echo $ecopix_base_font_line_height;?>;
       }
       *{
         color: <?php echo $ecopix_base_text_color;?>;      
-        font-family: <?php echo $ecopix_base_font_typography['font-family'];?>;
-        font-weight: <?php echo $ecopix_base_font_typography['variant'];?>;
-        font-size: <?php echo $ecopix_base_font_typography['font-size'];?>;
-        text-transform: <?php echo $ecopix_base_font_typography['text-transform'];?>;
-        letter-spacing: <?php echo $ecopix_base_font_typography['letter-spacing'];?>px;
-        text-decoration: <?php echo $ecopix_base_font_typography['text-decoration'];?>;
-        line-height: <?php echo $ecopix_base_font_typography['line-height'];?>;
+        font-family: <?php echo $ecopix_base_font_family;?> !important;
+        font-weight: <?php echo $ecopix_base_font_weight;?>;
+        font-size: <?php echo $ecopix_base_font_size;?>;
+        text-transform: <?php echo $ecopix_base_font_text_transform;?>;
+        letter-spacing: <?php echo $ecopix_base_font_letter_spacing;?>px;
+        text-decoration: <?php echo $ecopix_base_font_text_decoration;?>;
+        line-height: <?php echo $ecopix_base_font_line_height;?>;
       }
 
       h1{
@@ -122,15 +149,17 @@ function ecopix_style_from_customizer(){
       }
 
       #header-navigation li a{
-        font-family: <?php echo $ecopix_header_menu_typography['font-family'];?>;
-        font-weight: <?php echo $ecopix_header_menu_typography['variant'];?>;
-        font-size: <?php echo $ecopix_header_menu_typography['font-size'];?>;
-        text-transform: <?php echo $ecopix_header_menu_typography['text-transform'];?>;
-        color: <?php echo $ecopix_header_menu_typography['color'];?>;
+        font-family: <?php echo $ecopix_header_menu_font_family;?>;
+        font-weight: <?php echo $ecopix_header_menu_font_weight;?>;
+        font-size: <?php echo $ecopix_header_menu_font_size;?>;
+        text-transform: <?php echo $ecopix_header_menu_font_transform;?>;
+        letter-spacing: <?php echo $ecopix_header_menu_font_spacing;?>;
+        font-style: <?php echo $ecopix_header_menu_font_style;?>;
+        color: <?php echo $ecopix_header_menu_font_color;?>;
         margin-left: <?php echo $ecopix_menu_item_spacing;?>px;
         transition: .4s;
       }
-
+      
       #header-navigation li a:hover{
         color: <?php echo $ecopix_menu_item_hover;?>;
       }

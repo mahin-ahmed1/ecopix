@@ -66,6 +66,14 @@ function ecopix_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( "align-wide" );
+
+	add_theme_support( "responsive-embeds");
+
+	add_theme_support( "wp-block-styles");
+
+	add_editor_style();
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(

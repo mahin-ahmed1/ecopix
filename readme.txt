@@ -7,12 +7,26 @@ Requires at least: 4.5
 Tested up to: 5.4
 Requires PHP: 5.6
 Stable tag: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 A great customization theme called ecopix.
 
-== Description ==
+== Copyright ==
+
+Ecopix, 2023
+Ecopix is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
 
 Description
 
@@ -32,3 +46,19 @@ ecopix includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 = 1.0 - December 1 2023 =
 * Initial release
+
+== Screenshot Licenses ==
+
+Screenshot images are all licensed under GPLv2 or later
+
+== Bootstrap ==
+ Bootstrap  v5.2.2 (https://getbootstrap.com/)
+ Copyright: Copyright (C) 2011-2022 The Bootstrap Authors
+ Copyright: Copyright (C) 2011-2022 Twitter, Inc.
+ License: MIT License
+ License URI:under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+
+== Dashicons==
+ License: GPLv2 or later
+ License URI:  https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ Copyright: Copyright (C) 2007 Free Software Foundation

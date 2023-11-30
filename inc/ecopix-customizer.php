@@ -74,7 +74,7 @@ if (class_exists('Kirki')) {
 
     new \Kirki\Field\Typography(
         [
-            'settings'    => 'header_typography_setting',
+            'settings'    => 'header_typography_setting', 
             'label'       => esc_html__( 'Header Typography', 'ecopix' ),
             'section'     => 'header_section',
             'priority'    => 10,
@@ -86,6 +86,8 @@ if (class_exists('Kirki')) {
                 'color'           => '#343b50',
                 'font-size'       => '16px',
                 'text-transform'  => 'uppercase',
+                'text-decoration' =>'none',
+                'letter-spacing'  =>'0px',
             ],
             'output'      => [
                 [
@@ -378,7 +380,7 @@ if (class_exists('Kirki')) {
                 'variant'         => 'regular',
                 'font-style'      => 'normal',
                 'font-size'       => '16px',
-                'line-height'     => '1.5',
+                'line-height'     => '1.3em',
                 'letter-spacing'  => '0',
                 'text-transform'  => 'none',
                 'text-decoration' => 'none',
