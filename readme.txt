@@ -51,6 +51,12 @@ ecopix includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 Screenshot images are all licensed under GPLv2 or later
 
+
+==TGMPA Plugin
+Copyright: Copyright (c) 2011, Thomas Griffin
+Licensed: http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+
+
 == Bootstrap ==
  Bootstrap  v5.2.2 (https://getbootstrap.com/)
  Copyright: Copyright (C) 2011-2022 The Bootstrap Authors

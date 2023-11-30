@@ -31,7 +31,7 @@
 
 				<div class="col-3 logo-area">
 					<?php the_custom_logo();?>
-						<p class="site-title"><a class="text-decoration-none" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<p class="site-title mb-0"><a class="text-decoration-none" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 					$ecopix_description = get_bloginfo( 'description', 'display' );
 					if ( $ecopix_description || is_customize_preview() ) :
