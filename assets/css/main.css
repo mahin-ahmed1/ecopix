@@ -44,6 +44,12 @@ body{
 .header-menu li {
     display:inline-block;
 }
+.sub-menu{
+    text-align:left;
+}
+.sub-menu li a{
+    margin:0;
+}
 
 .header-menu .nav-link{
     display:inline-block;

@@ -13,31 +13,31 @@
 
 	<footer id="colophon" class="site-footer pb-2 pt-5">
 		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?>">
-			<div class="footer-row">
+			<div class="footer-row row">
 			<!--- WIDGET AREA 1 --->
 				<?php if(is_active_sidebar('ecopix-footer-widget-1')):?>
-				<div class="widget-1 px-0 px-lg-5">
+				<div class="widget-1 col-12 col-lg-3 px-0 px-lg-5">
 					<?php dynamic_sidebar( 'ecopix-footer-widget-1' ); ?>
 				</div>
 				<?php endif;?>
 				
 				<!--- WIDGET AREA 2 --->
 				<?php if(is_active_sidebar('ecopix-footer-widget-2')):?>
-				<div class="widget-2 px-0 px-lg-5">
+				<div class="widget-2 col-12 col-lg-3 px-0 px-lg-5">
 					<?php dynamic_sidebar( 'ecopix-footer-widget-2' ); ?>
 				</div>
 				<?php endif;?>
 
 				<!--- WIDGET AREA 3 --->
 				<?php if(is_active_sidebar('ecopix-footer-widget-3')):?>
-				<div class="widget-3 px-0 px-lg-5">
+				<div class="widget-3 col-12 col-lg-3 px-0 px-lg-5">
 					<?php dynamic_sidebar( 'ecopix-footer-widget-3' ); ?>
 				</div>
 				<?php endif;?>
 
 				<!--- WIDGET AREA 4 --->
 				<?php if(is_active_sidebar('ecopix-footer-widget-4')):?>
-				<div class="widget-4 px-0 px-lg-5">
+				<div class="widget-4 col-12 col-lg-3 px-0 px-lg-5">
 					<?php dynamic_sidebar( 'ecopix-footer-widget-4' ); ?>
 				</div>
 				<?php endif;?>

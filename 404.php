@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package ecopix
+ * @package ecopix 
  */
 
 get_header();
@@ -12,44 +12,23 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ecopix' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ecopix' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ecopix' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$ecopix_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ecopix' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$ecopix_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+		<section class="error-404 not-found <?php echo apply_filters("ecopix_entry_content_layout","container");?> pb-5">
+			<div class="row">
+				
+				<div class="col-12 loop-area <?php echo apply_filters('ecopix_col_manage','col-lg-9');?>">
+					<header class="page-header entry-header text-center">
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ecopix' ); ?></h1>
+					</header><!-- .page-header -->	
+					<p class="text-center"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ecopix' ); ?></p>
+				</div>
+					<!-- SIDEBAR AREA START -->
+				<?php if(get_theme_mod('sidebar_switch','on')):?>
+				<div class="col-12 col-lg-3 sidebar-area">
+					<?php get_sidebar();?>
+				</div>
+				<?php endif;?>
+				<!-- SIDEBAR AREA END-->
+				<!-- .widget -->
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->

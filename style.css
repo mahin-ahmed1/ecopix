@@ -95,7 +95,37 @@ h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
 }
+.page-title span{
 
+		color: #0c1465;
+		font-size: 36px;
+
+}
+
+.no-results .search-field {
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 6px 30px;
+}
+
+.wp-block-search__button:focus:not(:focus-visible){
+	color: white !important;
+}
+
+.no-results .search-submit:focus:not(:focus-visible){
+	color: white !important;
+}
+
+.site-info p{
+	color:white;
+}
+
+.no-results .search-submit{
+	background: #0C1465;
+    color: white;
+    padding: 10px 14px;
+}
 /* Grouping content
 	 ========================================================================== */
 
@@ -249,6 +279,8 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
+	background: black;
+    color: white !important;
 }
 
 /**
@@ -259,6 +291,8 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
 	outline: 1px dotted ButtonText;
+	background: black;
+    color: white !important;
 }
 
 /**
@@ -540,13 +574,16 @@ a:visited {
 }
 
 a:hover,
-a:focus,
 a:active {
 	color: #191970;
 }
-
+a:focus {
+	color: white !important;
+}
 a:focus {
 	outline: thin dotted;
+	background: black;
+    color: white !important;
 }
 
 a:hover,
@@ -626,6 +663,8 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
 	color: #111;
+	background: black;
+    color: white !important;
 }
 
 select {
@@ -685,6 +724,7 @@ textarea {
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: auto;
+	
 }
 
 .main-navigation li {
@@ -913,12 +953,12 @@ textarea {
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: black;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #21759b;
+	color: white !important;
 	display: block;
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -935,6 +975,8 @@ textarea {
 /* Do not show the outline on the skip link target. */
 #primary[tabindex="-1"]:focus {
 	outline: 0;
+	background: black;
+    color: white !important;
 }
 
 /* Alignments
@@ -994,7 +1036,7 @@ textarea {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #21759b;
+	color: white !important;
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1013,10 +1055,13 @@ textarea {
   /* Do not show the outline on the skip link target. */
   #content[tabindex="-1"]:focus {
 	outline: 0;
+	background: black;
+    color: white !important;
   }
   :focus {
 	  outline: none;
-	  color: #0C1465 !important;
+	  background: black;
+	  color: white !important;
   }
   .skip-link:focus{
 	outline: none;
@@ -1025,8 +1070,8 @@ textarea {
   }
 
   .entry-title a:focus{
-	background: #0C1465;
-	  color: white !important;
+	background: black;
+    color: white !important;
   }
   .skip-link {
 	padding:12px 20px !important;
@@ -1096,6 +1141,10 @@ ul .menu-item-has-children{
 .menu-item-has-children ul li{
 	display: block;
 }
+.pagination .nav-links .page-numbers:focus{
+	background:black;
+	color:white !important;
+}
 
 
 .submenu-indicator{
@@ -1103,8 +1152,14 @@ ul .menu-item-has-children{
 	text-decoration:none;
 	margin-left:5px !important;
 }
-
-
+.wp-block-search__button:focus{
+	background:black;
+	color:white;
+}
+.no-results .search-submit:focus{
+	background:black;
+	color:white;
+}
 
 .pagination{
 	background: #343B50;
