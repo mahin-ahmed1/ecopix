@@ -13,8 +13,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<section class="error-404 not-found <?php echo apply_filters("ecopix_entry_content_layout","container");?> pb-5">
-			<div class="row">
-				
+			<div class="row">	
 				<div class="col-12 loop-area <?php echo apply_filters('ecopix_col_manage','col-lg-9');?>">
 					<header class="page-header entry-header text-center">
 						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ecopix' ); ?></h1>
@@ -32,7 +31,6 @@ get_header();
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
-
 	</main><!-- #main -->
 
 <?php

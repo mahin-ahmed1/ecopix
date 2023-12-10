@@ -45,7 +45,7 @@
 		</div>
 		<div class="site-info pt-4 text-center <?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 				<?php
-				$ecopix_copyright = get_theme_mod('copyright_text','Copyright © 2023 - WordPress Theme by Mahin');
+				$ecopix_copyright = get_theme_mod('copyright_text',__('Copyright © 2023 - WordPress Theme by Mahin','ecopix'));
 				echo "<p>".$ecopix_copyright."</p>";
 				?>
 		</div><!-- .site-info -->

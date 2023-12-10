@@ -55,8 +55,8 @@ get_header();
 							endwhile;
 
 							the_posts_pagination(array(
-								'prev_text' => 'Previous',
-								'next_text' => 'Next',
+								'prev_text' => __('Previous','ecopix'),
+								'next_text' => __('Next','ecopix'),
 								'mid_size' => 1, // Adjust the number of page numbers displayed
 							));
 
