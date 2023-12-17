@@ -129,9 +129,8 @@ a time{
     padding-left:3px;
 }
 
-.entry-content p{
+.card .entry-content p{
     height: 90px;
-    font-weight: 400;
     margin-bottom:5px;
     color: #474747;
 }
@@ -242,7 +241,7 @@ SINGLE POST PAGE
 */
 
 .single-entry-meta{
-    width:500px;
+    width:100%;
 }
 
 .entry-header .single-entry-meta .posted-on{
@@ -262,7 +261,7 @@ SINGLE POST PAGE
 
 .single-post .entry-header, .author-box .entry-header, .category-box .entry-header, .archive-box .entry-header{
     margin-top: 26px;
-    padding: 30px 0 28px 30px;
+    padding: 30px 0 28px 0px;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 6px;
 }
