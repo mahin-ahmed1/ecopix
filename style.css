@@ -87,6 +87,15 @@ main {
 	display: block;
 }
 
+
+
+.entry-content{
+	overflow:hidden;
+}
+.entry-content ul{
+	margin:0;
+	padding:0;
+}
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -862,7 +871,14 @@ textarea {
 .wp-caption-text {
 	text-align: center;
 }
+#commentform input[type="submit"]{
+	background: #0C1465;
+    color: white;
 
+}
+figure{
+	padding:10px;
+}
 /* Galleries
 --------------------------------------------- */
 .gallery {
@@ -1198,7 +1214,12 @@ ul .menu-item-has-children{
 
 
 
-
+header .entry-title{
+	text-align:center;
+}
+header .entry-meta{
+	text-align:center;
+}
 
 
 
@@ -1211,6 +1232,11 @@ ul .menu-item-has-children{
     header{
         position:relative;
     }
+	
+
+	.entry-header .single-entry-meta .posted-on {
+		margin-top: 10px;
+	}
     #header-navigation{
         margin:0 !important;
         text-align:center !important;

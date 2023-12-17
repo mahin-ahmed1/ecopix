@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer pb-2 pt-5">
+	<footer id="colophon" class="site-footer pb-2 pt-5 overflow-hidden">
 		<div class="<?php echo apply_filters("ecopix_entry_content_layout","container");?>">
 			<div class="footer-row row">
 			<!--- WIDGET AREA 1 --->
