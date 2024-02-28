@@ -111,6 +111,11 @@ h1 {
 
 }
 
+.dashicons-menu{
+	width:100%;
+	height:auto;
+}
+
 .no-results .search-field {
     color: #666;
     border: 1px solid #ccc;
